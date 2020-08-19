@@ -1,13 +1,25 @@
 $theme-colors:(
   primary: #735CD9,
   dark: black,
+  gray: gray,
+);
+$featureFont: "Love Ya Like A Sister";
+$card-border-color: black;
+$input-font-size:         0.7rem;
+$input-border-radius: 0px;
+$btn-border-radius: 0px;
+
+$sizes: (
+  30: 30%,
+  40: 40%,
+  90: 90%,
 );
 
-$featureFont: "Love Ya Like A Sister";
-
-h1, h2, h3 {
+h1, h2, h3, h5 {
   font-family: $featureFont;
 }
+
+
 
 header {
   nav {
@@ -25,10 +37,41 @@ header {
   }
 }
 
+main {
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
 
+  .iconimage {
+    width: 32px;
+    height: 32px;
+  }
 
+  #whatsnew {
+    .card-img {
+      border-radius: 0px;
+    }
 
+    .btn {
+      font-size: 0.7rem;
+    }
 
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+
+  header section.jumbotron {
+      height: 40vh;
+      background-position-x: 50%;
+  }
+
+  main section#theidea div.w-40 {
+    width: 100% !important;
+  }
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
 @import "../../node_modules/bootstrap/scss/bootstrap";

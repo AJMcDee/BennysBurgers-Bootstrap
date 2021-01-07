@@ -4,45 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title></title>
+    <title>Benny's Burgers</title>
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="images/hamburger.svg" />
   </head>
   <body>
     <header>
-    
       <nav
-        class="navbar navbar-expand-sm sticky-top bg-dark navbar-dark"
+        class="navbar navbar-expand-sm sticky-top bg-dark navbar-dark d-flex"
       >
-        <div>
-          <img src="images/hamburger.svg" />
-          <span class="text-primary">Benny's</span>
-        </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div id="nav-container" class="d-flex align-items-center">
+          <div>
+            <img src="images/hamburger.svg" />
+            <span class="text-primary">Benny's</span>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav small">
-            <li class="px-2 nav-item active">
-              <a class="nav-link" href="#">The idea</a>
-            </li>
-            <li class="px-2 nav-item"><a class="nav-link" href="#">News</a></li>
-            <li class="px-2 nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav small">
+              <li class="px-2 nav-item active">
+                <a class="nav-link" href="#">The idea</a>
+              </li>
+              <li class="px-2 nav-item">
+                <a class="nav-link" href="#">News</a>
+              </li>
+              <li class="px-2 nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
 
       <section
+        id="jumbotron"
         class="jumbotron section text-white rounded-0 d-flex align-items-end"
       >
         <div class="container">
@@ -131,7 +136,10 @@
         class="container-fluid d-flex flex-column bg-primary align-items-center py-4"
       >
         <h2 class="mb-4">What's new at Benny's</h2>
-        <div id="cardcontainer" class="card-group align-items-center d-flex">
+        <div
+          id="cardcontainer"
+          class="card-group align-items-center d-flex w-60"
+        >
           <div class="card m-2">
             <img
               class="card-img"
@@ -277,7 +285,7 @@
         class="d-flex flex-column align-items-center my-4"
       >
         <h2 class="mb-3">Book a table</h2>
-        <form>
+        <form class="">
           <div class="form-group">
             <label for="fullname" class="small">Full name</label>
             <input
@@ -316,15 +324,46 @@
               rows="3"
             ></textarea>
           </div>
+          <a href="#" class="btn btn-light text-primary border-primary small"
+            >Book Now
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-arrow-right"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"
+              /></svg
+          ></a>
         </form>
       </section>
     </main>
     <footer class="container-fluid bg-dark text-right text-gray small p-2">
       Copyright 2020
     </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
     <!-- Custom scripts, edit above this line -->
     <script src="scripts/index.js"></script>
   </body>

@@ -1,39 +1,61 @@
-$theme-colors:(
-  primary: #735CD9,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$theme-colors: (
+  primary: #735cd9,
   dark: black,
   gray: gray,
 );
 $featureFont: "Love Ya Like A Sister";
 $card-border-color: black;
-$input-font-size:         0.7rem;
+$input-font-size: 0.7rem;
 $input-border-radius: 0px;
 $btn-border-radius: 0px;
 
 $sizes: (
   30: 30%,
   40: 40%,
+  60: 60%,
   90: 90%,
 );
 
-h1, h2, h3, h5 {
+h1,
+h2,
+h3,
+h5 {
   font-family: $featureFont;
 }
 
-
-
 header {
   nav {
+    justify-content: center !important;
+
+    @media screen and (max-width: 768px) {
+      justify-content: flex-end !important;
+    }
+
     img {
       height: 30px;
     }
-  }
 
+    #nav-container {
+      max-width: 60vw !important;
+      @media screen and (max-width: 768px) {
+        max-width: 100% !important;
+      }
+    }
+  }
+  #jumbotron {
+    min-height: 60vh;
+  }
   section {
     background-image: url(../images/lidye-1Shk_PkNkNw-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: bottom;
-
   }
 }
 
@@ -56,16 +78,33 @@ main {
     .btn {
       font-size: 0.7rem;
     }
-
   }
 
+  #theidea {
+    width: 60vw;
+    @media screen and (max-width: 1078px) {
+      width: 80vw;
+    }
+    @media screen and (max-width: 768px) {
+      width: 95vw;
+    }
+  }
+
+  form {
+    width: 50vw;
+    @media screen and (max-width: 1078px) {
+      width: 80vw;
+    }
+    @media screen and (max-width: 768px) {
+      width: 95vw;
+    }
+  }
 }
 
 @media screen and (max-width: 576px) {
-
   header section.jumbotron {
-      height: 40vh;
-      background-position-x: 50%;
+    height: 40vh;
+    background-position-x: 50%;
   }
 
   main section#theidea div.w-40 {
@@ -73,5 +112,5 @@ main {
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap");
 @import "../../node_modules/bootstrap/scss/bootstrap";

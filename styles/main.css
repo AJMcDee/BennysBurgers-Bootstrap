@@ -56,6 +56,9 @@ main #whatsnew .card-img {
 main #whatsnew .btn {
   font-size: 0.7rem;
 }
+main #whatsnew section {
+  padding: 3rem 0;
+}
 main #theidea {
   width: 60vw;
 }
